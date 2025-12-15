@@ -49,7 +49,7 @@
 
             // 取得學生列表
             try {
-                const response = await fetch('students');
+                const response = await fetch('/students');
                 const students = await response.json();
 
                 students.forEach(student => {
