@@ -8,7 +8,7 @@ const PORT = 3000;
 app.use(express.json());
 app.use(express.static('public'));
 
-mongoose.connect('mongodb://127.0.0.1:27017/studentDB')
+mongoose.connect(process.env.MONGO_URI)
   .then(() => console.log('MongoDB connected'))
   .catch(err => console.error(err));
 
