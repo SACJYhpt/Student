@@ -71,7 +71,7 @@
                 const grade = document.getElementById('grade').value;
 
                 try {
-                    const response = await fetch('students', {
+                    const response = await fetch('/students', {
                         method: 'POST',
                         headers: {
                             'Content-Type': 'application/json'
