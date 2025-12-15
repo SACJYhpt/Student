@@ -30,7 +30,7 @@
 
     <h2>新增學生</h2>
 
-    <form id="add-student-form">
+    <form id="add-student-form" onsubmit="return false;">
         <label for="name">姓名：</label>
         <input type="text" id="name" name="name" required>
 
@@ -87,6 +87,7 @@
                     );
 
                     event.target.reset(); // 清空表單欄位
+                    location.reload();
                 } catch (err) {
                     console.error('新增學生失敗：', err);
                 }
